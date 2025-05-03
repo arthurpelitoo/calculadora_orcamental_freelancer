@@ -1,0 +1,341 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+:root{
+    --maincolor: rgb(0, 195, 255);
+    --maincolorvariant1: rgb(157, 232, 255);
+    --maincolorvariant2: rgb(0, 255, 255);
+    --secondarycolor: rgb(0, 0, 0);
+    --secondarycolorvariant1: rgb(11, 11, 11);
+    --thirdcolor: rgb(255, 255, 255);
+    --componentblockcolor: rgb(33, 33, 33);
+    --textColor: rgb(175, 175, 175);
+    --currency: rgb(33, 182, 63);
+}
+
+html, body{
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: auto;
+    background-color: var(--secondarycolorvariant1);
+}
+
+*{
+    margin: 0;
+}
+
+header{
+    width: 100%;
+    background-color: var(--secondarycolor);
+    position: fixed;
+    .container{
+        width: 90%;
+        margin: auto;
+        .flex{
+            display: flex;
+            .flex-col1{
+                flex-basis: 50%;
+                display: flex;
+                align-items: center;
+                .headerLogo{
+                    display: block;
+                    text-decoration: none;
+                    text-align: left;
+                    font: 1.5em "Poppins", sans-serif, arial;
+                    color: var(--maincolor);
+                    transition: all 0.3s;
+                }
+                .headerLogo:hover{
+                    color: var(--maincolorvariant1);
+                }
+            }
+            .flex-col2{
+                flex-basis: 50%;
+                text-align: right;
+                .header-menu{
+                    display: block;
+                    text-align: right;
+                    font-size: 2rem;
+                    margin: 10px;
+                    color: var(--maincolor);
+                    transition: ease-in-out 0.3s;
+                }
+                .header-menu:hover{
+                    color: var(--maincolorvariant1);
+                }
+                .header-nav{
+                    display: none;
+                    position: absolute;
+                    left: 0;
+                    width: 100%;
+                    text-align: center;
+                    ul{
+                        list-style: none;
+                        padding: 0;
+                        margin: 0;
+                        li{
+                            display: block;
+                            background-color: var(--maincolor);
+                            transition: ease-in-out 0.3s;
+                            a{
+                                display: block;
+                                color: var(--thirdcolor);
+                                font: 1em "Poppins", sans-serif, arial;
+                                text-decoration: none;
+                                transition: ease-in-out 0.3s;
+                            }
+                            a:hover{
+                                color: var(--secondarycolor);
+                            }
+                        }
+                        li:hover{
+                            background-color:var(--maincolorvariant2);
+                        }
+                    }
+                }
+                .header-nav.active{
+                    display: block;
+                }
+            }
+        }
+    }
+}
+
+.sectionSpace{
+    width: 100%;
+    margin-top: 90px;
+    margin-bottom: 90px;
+    padding: 20px;
+    .container{
+        .formCalculoDeProjetos{
+            width: 90%;
+            display: flex;
+            margin: auto;
+            align-items: center;
+            flex-direction: column;
+            border-radius: 15px;
+            background-color: var(--componentblockcolor);
+            .valorFinal{
+                color: var(--currency);
+            }
+            h2{
+                margin: 30px;
+                text-align: center;
+                color: var(--thirdcolor);
+            }
+            .titleInput{
+                text-align: center;
+                font: 1em "Poppins", sans-serif, arial;
+                color: var(--textColor)
+            }
+            .inputStyle{
+                text-align: center;
+                width: 50%;
+                background-color: var(--secondarycolor);
+                color: var(--textColor);
+                font: 1em "Poppins", sans-serif, arial;
+                border: 5px solid var(--thirdcolor);
+                border-radius: 10px;
+                transition: ease-in-out 0.3s;
+            }
+            .inputStyle::placeholder{
+                color: var(--textColor);
+            }
+            .inputStyle:hover{
+                border: 5px solid var(--maincolorvariant2);
+            }
+            .btnCalculo{
+                cursor: pointer;
+                color: var(--secondarycolor);
+                text-align: center;
+                text-decoration: none;
+                font: 1em "Poppins", sans-serif, arial;
+                background-color: var(--maincolor);
+                padding: 10px;
+                border: 0;
+                border-radius: 30px;
+                transition: ease-in-out 0.3s;
+            }
+            .btnCalculo:hover{
+                background-color: var(--maincolorvariant2);
+            }
+        }
+    }
+}
+
+footer{
+    width: 100%;
+    height: 350px;
+    padding: 20px 0;
+    background-color: var(--secondarycolor);
+    .footerClass{
+        text-align: center;
+        h2{
+            font: 2em "Poppins", sans-serif, arial;
+            color: var(--textColor) !important;
+        }
+        .iconRedes{
+            a{
+                color: var(--maincolor);
+                font-size: 2em;
+                text-decoration: none;
+                margin: 15px;
+                transition: ease-in-out 0.3s;
+            }
+            a:hover{
+                color: var(--maincolorvariant2);
+            }
+        }
+        h4{
+            font: 1.5em "Poppins", sans-serif, arial;
+            color: var(--thirdcolor) !important;
+        }
+    }
+}
+
+@media (min-width: 1000px){
+    html, body{
+        overflow-x: hidden; 
+    }
+
+    header{
+        .container{
+            width: 1000px;
+            .flex{
+                .flex-col1{
+                    flex-basis: 30%;
+                    .headerLogo{
+                        text-align: left;
+                        
+                    }
+                }
+                .flex-col2{
+                    flex-basis: 70%;
+                    margin: auto;
+                    .header-menu{
+                        display: none;
+                    }
+                    .header-nav{
+                        display: block;
+                        position: relative;
+                        text-align: right;
+                        ul{
+                            li{
+                                display: inline-block;
+                                border-radius: 10px;
+                                margin-left: 5px;
+                                margin-right: 5px;
+                                a{
+                                    padding: 15px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* Personalização do Modal */
+
+.modal-container{
+    display: flex;
+    position: relative;
+    z-index: 2;
+
+    .modal{
+        background-color: var(--maincolorvariant1);
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+        justify-content: space-between;
+        position: fixed;
+        z-index: 3;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 50vw;
+        height: 500px;
+        border-radius: 10px;
+        .modalContainerTitle{
+            width: 100%;
+            padding: 25px;
+            background-color: var(--maincolor);
+            .modalTitle{
+                font: 1.5em "Poppins", sans-serif, arial;
+                color: var(--thirdcolor) !important;
+            }
+        }
+        .modalContainerMessage{
+            width: 100%;
+            padding: 25px;
+            .modalMessage{
+                font: 1.5em "Poppins", sans-serif, arial;
+                color: var(--secondarycolor) !important;
+            }
+        }
+        .modalButton{
+            width: 100%;
+            padding: 25px;
+            background-color: var(--maincolor);
+            button{
+                padding: 5px;
+                background-color: var(--maincolorvariant1);
+                color: var(--secondarycolor);
+                font: 1.2em "Poppins", sans-serif, arial;
+                transition: ease-in-out 0.3s;
+                border: 0;
+                border-radius: 30px;
+            }
+            button:hover{
+                background-color: var(--maincolorvariant2);
+            }
+        }
+    }
+
+}
+
+.modal-overlay{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+    backdrop-filter: blur(5px);
+}
+
+
+/* Personalização da Scrollbar para navegadores WebKit (Chrome, Edge, Safari) NAO FUNCIONA NO FIREFOX */
+
+::-webkit-scrollbar {
+    width: 10px; /* Largura da barra */
+}
+
+/* Fundo da barra de rolagem */
+::-webkit-scrollbar-track {
+    background: var(--secondarycolorvariant1); /* Cor de fundo */
+}
+
+/* Barra de rolagem */
+::-webkit-scrollbar-thumb {
+    background: var(--maincolor); /* Cor da barra */
+    border-radius: 3px; /* Bordas arredondadas */
+    transition: ease-in-out 1s;
+}
+
+/* Quando o usuário passa o mouse */
+::-webkit-scrollbar-thumb:hover {
+    background: var(--maincolorvariant2); /* Cor ao passar o mouse */
+}
+
+/* muda a cor da barra no FIREFOX */
+scrollbar-color{
+    background: var(--maincolor);
+}
+
+/* Fim da personalização da Scrollbar */
