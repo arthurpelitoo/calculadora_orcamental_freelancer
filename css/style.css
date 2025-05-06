@@ -25,8 +25,11 @@ html, body{
     margin: 0;
 }
 
+/* Inicio da estilização do Header. */
+
 header{
     width: 100%;
+    z-index: 11;
     background-color: var(--secondarycolor);
     position: fixed;
     .container{
@@ -102,12 +105,34 @@ header{
     }
 }
 
+/* Fim da estilização do Header. */
+
+/* Inicio da estilização do sectionSpace. */
+
 .sectionSpace{
     width: 100%;
     margin-top: 90px;
     margin-bottom: 90px;
     padding: 20px;
     .container{
+        .cardBlack{
+            background-color: var(--componentblockcolor) !important;
+            .ordener{
+                .responsive{
+                    .profile{
+                        width: 50%;
+                    }
+                    h1{
+                        color: var(--thirdcolor);
+                    }
+                    .lead{
+                        color: var(--textColor);
+                    }
+                }
+            }
+        }
+
+        /* Estilização apenas para o formulario de calculo. */
         .formCalculoDeProjetos{
             width: 90%;
             display: flex;
@@ -160,9 +185,53 @@ header{
             .btnCalculo:hover{
                 background-color: var(--maincolorvariant2);
             }
+            /* Estilização apenas para o formulario de calculo. */
+        }
+
+        .faixa{
+            text-align: center;
+            .faixaTitle{
+            font: 32px 'Poppins', Arial, Helvetica, sans-serif;
+            color: var(--thirdcolor);
+            background: var(--maincolor);
+            border-radius: 50px;
+            text-align: justify;
+            padding: 10px;
+            line-height: 40px;
+            }
+        }
+
+        .formContato{
+            background-color: var(--componentblockcolor);
+            .labelForm{
+                text-align: center;
+                font: 20px 'Poppins', Arial, Helvetica, sans-serif;
+                color: var(--thirdcolor);
+                margin: 15px;
+            }
+            .inputForm{
+                text-align: center;
+                background-color: var(--maincolorvariant1);
+                font: 18px 'Poppins', Arial, Helvetica, sans-serif;
+                color: var(--secondarycolor);
+                border: 0;
+                border-radius: 25px;
+            }
+            .textAreaForm{
+                text-align: center;
+                background-color: var(--maincolorvariant1);
+                font: 18px 'Poppins', Arial, Helvetica, sans-serif;
+                color: var(--secondarycolor);
+                border: 0;
+                border-radius: 25px;
+            }
         }
     }
 }
+
+/* Fim da estilização do sectionSpace. */
+
+/* Estilização do footer */
 
 footer{
     width: 100%;
@@ -193,6 +262,10 @@ footer{
         }
     }
 }
+
+/* Fim da estilização do footer */
+
+/* Inicio da responsividade de minimo de 1000px */
 
 @media (min-width: 1000px){
     html, body{
@@ -230,6 +303,21 @@ footer{
                                     padding: 15px;
                                 }
                             }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+
+    .sectionSpace{
+        .container{
+            .cardBlack{
+                .ordener{
+                    .responsive{
+                        .profile{
+                            width: 80%;
                         }
                     }
                 }
@@ -308,6 +396,8 @@ footer{
     z-index: 1;
     backdrop-filter: blur(5px);
 }
+
+/* fim da personalização do modal */
 
 
 /* Personalização da Scrollbar para navegadores WebKit (Chrome, Edge, Safari) NAO FUNCIONA NO FIREFOX */
