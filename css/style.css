@@ -202,28 +202,63 @@ header{
         }
 
         .formContato{
+            margin: auto;
+            width: 75%;
             background-color: var(--componentblockcolor);
             .labelForm{
-                text-align: center;
+
+                text-align: start;
                 font: 20px 'Poppins', Arial, Helvetica, sans-serif;
                 color: var(--thirdcolor);
                 margin: 15px;
             }
             .inputForm{
                 text-align: center;
-                background-color: var(--maincolorvariant1);
+                background-color: var(--secondarycolor);
                 font: 18px 'Poppins', Arial, Helvetica, sans-serif;
-                color: var(--secondarycolor);
+                color: var(--thirdcolor);
                 border: 0;
-                border-radius: 25px;
+                border: 5px solid var(--maincolor);
+                border-radius: 15px;
+                transition: ease-in-out 0.3s;
             }
+
+            .inputForm:hover{
+                border: 5px solid var(--maincolorvariant2);
+            }
+
             .textAreaForm{
                 text-align: center;
-                background-color: var(--maincolorvariant1);
+                background-color: var(--secondarycolor);
                 font: 18px 'Poppins', Arial, Helvetica, sans-serif;
-                color: var(--secondarycolor);
+                color: var(--thirdcolor);
                 border: 0;
-                border-radius: 25px;
+                border: 5px solid var(--maincolor);
+                border-radius: 15px;
+                resize: none;
+                height: 150px;
+                transition: ease-in-out 0.5s;
+            }
+
+            .textAreaForm:hover{
+                border: 5px solid var(--maincolorvariant2);
+            }
+
+            .btn{
+                margin: auto;
+                width: 50%;
+                border: 0;
+                border-radius: 10px;
+                font: 16px 'Poppins', Arial, Helvetica, sans-serif;
+                background-color: var(--maincolor);
+                color: var(--thirdcolor);
+                transition: ease-in-out 0.3s;
+            }
+
+            .btn:hover{
+                transform: scale(1.1);
+                background-color: var(--maincolorvariant2);
+                color: var(--secondarycolor);
             }
         }
     }
